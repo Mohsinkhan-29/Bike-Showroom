@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3, h4 {
+    @apply font-display uppercase tracking-wide leading-tight;
+  }
+  html { scroll-behavior: smooth; }
+}
+
+@layer components {
+  /* The "spec plate" — the signature riveted metal-plate look used
+     across the original static site for bike specs and info blocks. */
+  .spec-plate {
+    @apply relative bg-steel border border-steel-line rounded p-4;
+  }
+  .spec-plate .rivet {
+    @apply absolute w-1.5 h-1.5 rounded-full bg-chrome/60;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 rounded font-display uppercase tracking-wide text-sm font-semibold transition-colors;
+  }
+  .btn-primary {
+    @apply bg-amber text-ink hover:bg-amber-dim;
+  }
+  .btn-outline {
+    @apply border border-chrome text-offwhite hover:border-amber hover:text-amber;
+  }
+  .eyebrow {
+    @apply font-mono text-xs tracking-[.15em] uppercase text-amber-dim;
+  }
+  .container-page {
+    @apply max-w-[1180px] mx-auto px-6;
+  }
+}

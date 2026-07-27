@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:5000/api";
+const baseURL = "https://bike-showroom-2d06.onrender.com/api";
 
 export const api = axios.create({ baseURL });
 

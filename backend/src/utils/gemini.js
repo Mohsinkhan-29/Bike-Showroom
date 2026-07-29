@@ -61,6 +61,13 @@ export async function chatComplete({ systemInstruction, history, message }) {
     { role: "user", parts: [{ text: message }] },
   ];
 
+  console.log({
+    model: env.geminiChatModel,
+    systemInstructionLength: systemInstruction.length,
+    historyMessages: history.length,
+    messageLength: message.length,
+  });
+
   const res = await fetch(url, {
     method: "POST",
     headers: { "content-type": "application/json" },

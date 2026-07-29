@@ -67,6 +67,7 @@ export async function chatComplete({ systemInstruction, history, message }) {
     historyMessages: history.length,
     messageLength: message.length,
   });
+  console.log(url);
 
   const res = await fetch(url, {
     method: "POST",
